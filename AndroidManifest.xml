@@ -1,0 +1,114 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.atense"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="19" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        
+        <activity android:name="com.atense.activity.FlowLayoutActivity"> <!-- StartActivity -->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        
+        <activity android:name="com.atense.activity.TestActivity" />
+        <activity android:name="com.atense.activity.CustomActivity" />
+        <activity android:name="com.atense.activity.TableLayoutActivity" />
+        <activity android:name="com.atense.activity.FrameLayoutActivity" />
+        <activity android:name="com.atense.activity.RelativeLayoutActivity" />
+        <activity android:name="com.atense.activity.GridLayoutActivity" />
+        <activity android:name="com.atense.activity.TextViewActivity" />
+        <activity android:name="com.atense.activity.ToggleButtonActivity" />
+        <activity android:name="com.atense.activity.ClockActivity" />
+        <activity android:name="com.atense.activity.ChronometerActivity" />
+        <activity android:name="com.atense.activity.ImageViewActivity" />
+        <activity android:name="com.atense.activity.Test1Activity" />
+        <activity android:name="com.atense.activity.Test2Activity"
+            android:theme="@android:style/Theme.Dialog" />
+        <activity android:name="com.atense.activity.Test3Activity" />
+        <activity android:name="com.atense.activity.QuickContactBadgeActivity" />
+        <activity android:name="com.atense.activity.ListViewActivity" />
+        <activity android:name="com.atense.activity.ArrayAdapterActivity" />
+        <activity android:name="com.atense.activity.ListActivityActivity" />
+        <activity android:name="com.atense.activity.SimpleAdapterActivity" />
+        <activity android:name="com.atense.activity.ExpandableListViewActivity" />
+        <activity android:name="com.atense.activity.SpinnerActivity" />
+        <activity android:name="com.atense.activity.AdapterViewFlipperActivity" />
+        <activity android:name="com.atense.activity.StackViewActivity" />
+        <activity android:name="com.atense.activity.ProgressBarActivity" />
+        <activity android:name="com.atense.activity.ViewSwitcherActivity" />
+        <activity android:name="com.atense.activity.CalendarViewActivity" />
+        <activity android:name="com.atense.activity.SearchViewActivity" />
+        <activity android:name="com.atense.activity.DialogActivity" />
+        <activity android:name="com.atense.activity.MenuActivity" />
+        <activity android:name="com.atense.activity.ActionBarActivity" />
+        <activity android:name="com.atense.activity.PlaneViewActivity" />
+        <activity android:name="com.atense.activity.CalPrimeActivity" />
+        <activity android:name="com.atense.activity.AsyncTaskActivity" />
+        <activity android:name="com.atense.activity.SelectBookActivity" />
+        <activity android:name="com.atense.activity.BookDetailActivity" />
+        <activity android:name="com.atense.activity.BookListActivity" />
+        <activity android:name="com.atense.activity.BitmapActivity" />
+        <activity android:name="com.atense.activity.DrawingBoardActivity" />
+        <activity android:name="com.atense.activity.AlphaImageViewActivity" />
+        <activity android:name="com.atense.activity.RawResActivity" />
+        <activity android:name="com.atense.activity.PathActivity" />
+        <activity android:name="com.atense.activity.SurfaceViewActivity" />
+        <activity android:name="com.atense.activity.GestureImageViewActivity" />
+        <activity android:name="com.atense.activity.ViewFlipperActivity" />
+        <activity android:name="com.atense.activity.GestureLibsActivity" />
+        <activity android:name="com.atense.activity.TTSActivity" />
+        <activity android:name="com.atense.activity.DictActivity" />
+        <activity android:name="com.atense.activity.ResultActivity"
+            android:theme="@android:style/Theme.Dialog" />
+        <activity android:name="com.atense.activity.ServiceActivity" />
+        <activity android:name="com.atense.activity.TelephonyManagerActivity" />
+        <activity android:name="com.atense.activity.SMSActivity" />
+        <activity android:name="com.atense.activity.BroadcastActivity" />
+        
+        <service android:name="com.atense.service.BaseService">
+            <intent-filter>
+                <action android:name="com.atense.service.BASE_SERVICE" />
+            </intent-filter>
+        </service>
+        <service android:name="com.atense.service.MyService"> </service>
+        <service android:name="com.atense.service.MyIntentService"> </service>
+        <service android:name="com.atense.service.AIDLService">
+            <intent-filter>
+                <action android:name="com.atense.service.AIDL_SERVICE" />
+            </intent-filter>
+        </service>
+        
+        <receiver android:name="com.atense.broadcast.MyReceiver">
+            <intent-filter android:priority="20">
+                <action android:name="com.atense.broadcast.MY_RECEIVER"/>
+            </intent-filter>
+        </receiver>
+        
+        <receiver android:name="com.atense.broadcast.MyReceiver2">
+            <intent-filter android:priority="0">
+                <action android:name="com.atense.broadcast.MY_RECEIVER"/>
+            </intent-filter>
+        </receiver>
+        
+    </application>
+    
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+</manifest>

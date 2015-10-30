@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:orientation="vertical">
+    
+    <AutoCompleteTextView 
+        android:id="@+id/auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:completionHint="请选择一本书"
+        android:completionThreshold="1"
+        android:dropDownVerticalOffset="10dp"/>
+    
+    <MultiAutoCompleteTextView
+        android:id="@+id/mauto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:completionThreshold="1"/>
+    
+    <TextView 
+        android:id="@+id/text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="我爱Java"
+        android:textSize="20pt"
+        android:drawableEnd="@drawable/ic_launcher"/>
+    
+    <TextView 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="我爱Java我爱Java我爱Java我爱Java我爱Java我爱Java我爱Java我爱Java我爱Java我爱Java我爱Java"
+        android:textSize="14pt"
+        android:singleLine="true"
+        android:ellipsize="middle"
+        android:textAllCaps="true"/>
+    
+    <TextView 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="邮箱lk_likai@126.com，电话15238673021"
+        android:textSize="10pt"
+        android:autoLink="email|phone"/>
+    
+    <TextView 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="测试文字"
+        android:textSize="10pt"
+        android:textColor="#f00"
+        android:shadowColor="#00f"
+        android:shadowDx="10.0"
+        android:shadowDy="5.0"
+        android:shadowRadius="3.0"/>
+    
+    <CheckedTextView 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="可勾选的文本"
+        android:checkMark="@android:drawable/btn_radio"/>
+    
+    <TextView 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="测试文字"
+        android:textSize="10pt"
+        android:background="@drawable/bg_border"/>
+    
+    <ToggleButton 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

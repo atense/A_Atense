@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <!-- 第二列允许收缩 第三列允许拉伸 -->
+    <TableLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:shrinkColumns="1"
+        android:stretchColumns="2">
+        
+        <Button 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="独自一行的按钮" />
+        
+        <TableRow>
+        
+        <Button 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="普通按钮" />
+        
+        <Button 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="收缩按钮" />
+        
+        <Button 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="拉伸按钮" />
+            
+        </TableRow>
+        
+        
+    </TableLayout>
+    
+    <!-- 第二列允许隐藏 -->
+    <TableLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:collapseColumns="1">
+        
+        <Button 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="独自一行的按钮" />
+        
+        <TableRow>
+        
+        <Button 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="普通按钮" />
+        
+        <Button 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="收缩按钮" />
+        
+        <Button 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="拉伸按钮" />
+            
+        </TableRow>
+        
+        
+    </TableLayout>
+    
+    <!-- 第二列、第三列允许拉伸 -->
+    <TableLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="1,2">
+        
+        <Button 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="独自一行的按钮" />
+        
+        <TableRow>
+        
+	        <Button 
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="普通按钮" />
+	        
+	        <Button 
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="拉伸按钮" />
+	        
+	        <Button 
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="拉伸按钮" />
+            
+        </TableRow>
+        <TableRow>
+        
+	        <Button 
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="普通按钮" />
+	        
+	        <Button 
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="拉伸按钮" />
+	        
+            
+        </TableRow>
+        
+        
+    </TableLayout>
+
+</LinearLayout>

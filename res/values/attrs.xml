@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <declare-styleable name="AlphaImageView">
+        <attr name="duration" format="integer"></attr>
+    </declare-styleable>
+    
+    <declare-styleable name="FlowLayout">
+		<attr name="android:gravity" />
+		<attr name="columns" format="integer" />
+		<!-- <attr name="horizontal_space" format="dimension" />
+		<attr name="vertical_space" format="dimension" /> -->
+	</declare-styleable>
+	<declare-styleable name="FlowLayout_Layout">
+		<attr name="android:layout_gravity" />
+	</declare-styleable>
+    
+</resources>

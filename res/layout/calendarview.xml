@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <CalendarView 
+        android:id="@+id/calendar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:firstDayOfWeek="2"
+        android:shownWeekCount="5"
+        android:focusedMonthDateColor="#f00"
+        android:unfocusedMonthDateColor="#f9f"
+        android:weekSeparatorLineColor="#ff0"
+        android:selectedWeekBackgroundColor="#aff"/>
+    
+    <LinearLayout
+        android:layout_height="0dp"
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+        
+        <DatePicker 
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:startYear="1970"
+            android:endYear="2015"
+            android:spinnersShown="false" />
+        
+        <TimePicker 
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+        
+    </LinearLayout>
+
+</LinearLayout>

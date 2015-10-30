@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">A_Atense</string>
+    
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+    
+    <string name="clear">Clear</string>
+    <string name="zero">0</string>
+    
+    <string name="test_custom">Test Custom</string>
+    <string name="test_tablelayout">Test TableLayout</string>
+    <string name="test_framelayout">Test FrameLayout</string>
+    <string name="test_relativelayout">Test RelativeLayout</string>
+    <string name="test_gridlayout">Test GridLayout</string>
+    <string name="test_textview">Test TextView</string>
+    <string name="test_togglebutton">Test ToggleButton</string>
+
+</resources>

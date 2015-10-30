@@ -1,0 +1,512 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+	<LinearLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="vertical">
+	    <com.atense.widget.FlowLayout 
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content">
+	        
+	        <Button 
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_marginTop="@dimen/margin_top"
+		        android:layout_marginBottom="@dimen/margin_bottom"
+		        android:text="Test Broadcast"/>
+	        <Button 
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_marginTop="@dimen/margin_top"
+		        android:layout_marginBottom="@dimen/margin_bottom"
+		        android:text="Test Broadcast"/>
+	        <Button 
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_marginTop="@dimen/margin_top"
+		        android:layout_marginBottom="@dimen/margin_bottom"
+		        android:text="Test Broadcast"/>
+	        <Button 
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_marginTop="@dimen/margin_top"
+		        android:layout_marginBottom="@dimen/margin_bottom"
+		        android:text="Test Broadcast"/>
+	        
+	    </com.atense.widget.FlowLayout>
+	    
+	    <Button 
+	        android:id="@+id/test_broadcast"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="@dimen/margin_left"
+	        android:layout_marginRight="@dimen/margin_right"
+	        android:layout_marginTop="@dimen/margin_top"
+	        android:layout_marginBottom="@dimen/margin_bottom"
+	        android:text="Test Broadcast"/>
+	    
+	    <Button 
+	        android:id="@+id/test_smsmanager"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="@dimen/margin_left"
+	        android:layout_marginRight="@dimen/margin_right"
+	        android:layout_marginTop="@dimen/margin_top"
+	        android:layout_marginBottom="@dimen/margin_bottom"
+	        android:text="Test SmsManager"/>
+	    
+	    <Button 
+	        android:id="@+id/test_telephonymanager"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="@dimen/margin_left"
+	        android:layout_marginRight="@dimen/margin_right"
+	        android:layout_marginTop="@dimen/margin_top"
+	        android:layout_marginBottom="@dimen/margin_bottom"
+	        android:text="Test TelephonyManager"/>
+	    
+	    <Button 
+	        android:id="@+id/test_service"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="@dimen/margin_left"
+	        android:layout_marginRight="@dimen/margin_right"
+	        android:layout_marginTop="@dimen/margin_top"
+	        android:layout_marginBottom="@dimen/margin_bottom"
+	        android:text="Test Service"/>
+	    
+	    <Button 
+	        android:id="@+id/test_dict"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="@dimen/margin_left"
+	        android:layout_marginRight="@dimen/margin_right"
+	        android:layout_marginTop="@dimen/margin_top"
+	        android:layout_marginBottom="@dimen/margin_bottom"
+	        android:text="Test Dict"/>
+	    
+	    <Button 
+	        android:id="@+id/test_tts"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="@dimen/margin_left"
+	        android:layout_marginRight="@dimen/margin_right"
+	        android:layout_marginTop="@dimen/margin_top"
+	        android:layout_marginBottom="@dimen/margin_bottom"
+	        android:text="Test TTS"/>
+	    
+	    <Button 
+	        android:id="@+id/test_gesturelibs"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="@dimen/margin_left"
+	        android:layout_marginRight="@dimen/margin_right"
+	        android:layout_marginTop="@dimen/margin_top"
+	        android:layout_marginBottom="@dimen/margin_bottom"
+	        android:text="Test GestureOverlayView"/>
+	    
+	    <Button 
+	        android:id="@+id/test_viewflipper"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="@dimen/margin_left"
+	        android:layout_marginRight="@dimen/margin_right"
+	        android:layout_marginTop="@dimen/margin_top"
+	        android:layout_marginBottom="@dimen/margin_bottom"
+	        android:text="Test ViewFlipper"/>
+	    
+	    <Button 
+	        android:id="@+id/test_gesture"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="@dimen/margin_left"
+	        android:layout_marginRight="@dimen/margin_right"
+	        android:layout_marginTop="@dimen/margin_top"
+	        android:layout_marginBottom="@dimen/margin_bottom"
+	        android:text="Test GestureDetector"/>
+	    
+	    <Button 
+	        android:id="@+id/test_surfaceview"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="@dimen/margin_left"
+	        android:layout_marginRight="@dimen/margin_right"
+	        android:layout_marginTop="@dimen/margin_top"
+	        android:layout_marginBottom="@dimen/margin_bottom"
+	        android:text="Test SurfaceView"/>
+	    
+	    <Button 
+	        android:id="@+id/test_path"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="@dimen/margin_left"
+	        android:layout_marginRight="@dimen/margin_right"
+	        android:layout_marginTop="@dimen/margin_top"
+	        android:layout_marginBottom="@dimen/margin_bottom"
+	        android:text="Test Path"/>
+	    
+	    <Button 
+	        android:id="@+id/test_rawres"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="@dimen/margin_left"
+	        android:layout_marginRight="@dimen/margin_right"
+	        android:layout_marginTop="@dimen/margin_top"
+	        android:layout_marginBottom="@dimen/margin_bottom"
+	        android:text="Test RawRes"/>
+	    
+	    <Button 
+	        android:id="@+id/test_alphaimageview"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="@dimen/margin_left"
+	        android:layout_marginRight="@dimen/margin_right"
+	        android:layout_marginTop="@dimen/margin_top"
+	        android:layout_marginBottom="@dimen/margin_bottom"
+	        android:text="Test AlphaImageView"/>
+	    
+	    <Button 
+	        android:id="@+id/test_drawingboard"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="@dimen/margin_left"
+	        android:layout_marginRight="@dimen/margin_right"
+	        android:layout_marginTop="@dimen/margin_top"
+	        android:layout_marginBottom="@dimen/margin_bottom"
+	        android:text="Test DrawingBoard"/>
+	    
+	    <Button 
+	        android:id="@+id/test_bitmap"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="@dimen/margin_left"
+	        android:layout_marginRight="@dimen/margin_right"
+	        android:layout_marginTop="@dimen/margin_top"
+	        android:layout_marginBottom="@dimen/margin_bottom"
+	        android:text="Test Bitmap"/>
+	    
+	    <Button 
+	        android:id="@+id/test_book"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="@dimen/margin_left"
+	        android:layout_marginRight="@dimen/margin_right"
+	        android:layout_marginTop="@dimen/margin_top"
+	        android:layout_marginBottom="@dimen/margin_bottom"
+	        android:text="Test Book"/>
+	    
+	    <Button 
+	        android:id="@+id/test_bookfragment"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="@dimen/margin_left"
+	        android:layout_marginRight="@dimen/margin_right"
+	        android:layout_marginTop="@dimen/margin_top"
+	        android:layout_marginBottom="@dimen/margin_bottom"
+	        android:text="Test Book Fragment"/>
+	    
+	    <Button 
+	        android:id="@+id/test_asynctask"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="@dimen/margin_left"
+	        android:layout_marginRight="@dimen/margin_right"
+	        android:layout_marginTop="@dimen/margin_top"
+	        android:layout_marginBottom="@dimen/margin_bottom"
+	        android:text="Test AsyncTask"/>
+	    
+	    <Button 
+	        android:id="@+id/test_calprime"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="@dimen/margin_left"
+	        android:layout_marginRight="@dimen/margin_right"
+	        android:layout_marginTop="@dimen/margin_top"
+	        android:layout_marginBottom="@dimen/margin_bottom"
+	        android:text="Test Cal Prime"/>
+	    
+	    <Button 
+	        android:id="@+id/test_plane"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="@dimen/margin_left"
+	        android:layout_marginRight="@dimen/margin_right"
+	        android:layout_marginTop="@dimen/margin_top"
+	        android:layout_marginBottom="@dimen/margin_bottom"
+	        android:text="Test PlaneView"/>
+	    
+	    <Button 
+	        android:id="@+id/test_actionbar"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="@dimen/margin_left"
+	        android:layout_marginRight="@dimen/margin_right"
+	        android:layout_marginTop="@dimen/margin_top"
+	        android:layout_marginBottom="@dimen/margin_bottom"
+	        android:text="Test ActionBar"/>
+	    
+	    <Button 
+	        android:id="@+id/test_menu"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="@dimen/margin_left"
+	        android:layout_marginRight="@dimen/margin_right"
+	        android:layout_marginTop="@dimen/margin_top"
+	        android:layout_marginBottom="@dimen/margin_bottom"
+	        android:text="Test Menu"/>
+	    
+	    <Button 
+	        android:id="@+id/test_dialog"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="@dimen/margin_left"
+	        android:layout_marginRight="@dimen/margin_right"
+	        android:layout_marginTop="@dimen/margin_top"
+	        android:layout_marginBottom="@dimen/margin_bottom"
+	        android:text="Test Dialog"/>
+	    
+	    <Button 
+	        android:id="@+id/test_searchview"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="@dimen/margin_left"
+	        android:layout_marginRight="@dimen/margin_right"
+	        android:layout_marginTop="@dimen/margin_top"
+	        android:layout_marginBottom="@dimen/margin_bottom"
+	        android:text="Test SearchView"/>
+	    
+	    <Button 
+	        android:id="@+id/test_calendarview"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="@dimen/margin_left"
+	        android:layout_marginRight="@dimen/margin_right"
+	        android:layout_marginTop="@dimen/margin_top"
+	        android:layout_marginBottom="@dimen/margin_bottom"
+	        android:text="Test CalendarView"/>
+	    
+	    <Button 
+	        android:id="@+id/test_viewswitcher"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="@dimen/margin_left"
+	        android:layout_marginRight="@dimen/margin_right"
+	        android:layout_marginTop="@dimen/margin_top"
+	        android:layout_marginBottom="@dimen/margin_bottom"
+	        android:text="Test ViewSwitcher"/>
+	    
+	    <Button 
+	        android:id="@+id/test_progressbar"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="@dimen/margin_left"
+	        android:layout_marginRight="@dimen/margin_right"
+	        android:layout_marginTop="@dimen/margin_top"
+	        android:layout_marginBottom="@dimen/margin_bottom"
+	        android:text="Test ProgressBar"/>
+	    
+	    <Button 
+	        android:id="@+id/test_stackview"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="@dimen/margin_left"
+	        android:layout_marginRight="@dimen/margin_right"
+	        android:layout_marginTop="@dimen/margin_top"
+	        android:layout_marginBottom="@dimen/margin_bottom"
+	        android:text="Test StackView"/>
+	    
+	    <Button 
+	        android:id="@+id/test_adapterviewfilpper"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="@dimen/margin_left"
+	        android:layout_marginRight="@dimen/margin_right"
+	        android:layout_marginTop="@dimen/margin_top"
+	        android:layout_marginBottom="@dimen/margin_bottom"
+	        android:text="Test AdapterViewFilpper"/>
+	    
+	    <Button 
+	        android:id="@+id/test_spinner"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="@dimen/margin_left"
+	        android:layout_marginRight="@dimen/margin_right"
+	        android:layout_marginTop="@dimen/margin_top"
+	        android:layout_marginBottom="@dimen/margin_bottom"
+	        android:text="Test Spinner"/>
+	    
+	    <Button 
+	        android:id="@+id/test_expandablelistview"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="@dimen/margin_left"
+	        android:layout_marginRight="@dimen/margin_right"
+	        android:layout_marginTop="@dimen/margin_top"
+	        android:layout_marginBottom="@dimen/margin_bottom"
+	        android:text="Test ExpandableListView"/>
+	    
+	    <Button 
+	        android:id="@+id/test_simpleadapter"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="@dimen/margin_left"
+	        android:layout_marginRight="@dimen/margin_right"
+	        android:layout_marginTop="@dimen/margin_top"
+	        android:layout_marginBottom="@dimen/margin_bottom"
+	        android:text="Test SimpleAdapter"/>
+	    
+	    <Button 
+	        android:id="@+id/test_listactivity"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="@dimen/margin_left"
+	        android:layout_marginRight="@dimen/margin_right"
+	        android:layout_marginTop="@dimen/margin_top"
+	        android:layout_marginBottom="@dimen/margin_bottom"
+	        android:text="Test ListActivity"/>
+	    
+	    <Button 
+	        android:id="@+id/test_arrayadapter"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="@dimen/margin_left"
+	        android:layout_marginRight="@dimen/margin_right"
+	        android:layout_marginTop="@dimen/margin_top"
+	        android:layout_marginBottom="@dimen/margin_bottom"
+	        android:text="Test ArrayAdapter"/>
+	    
+	    <Button 
+	        android:id="@+id/test_listview"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="@dimen/margin_left"
+	        android:layout_marginRight="@dimen/margin_right"
+	        android:layout_marginTop="@dimen/margin_top"
+	        android:layout_marginBottom="@dimen/margin_bottom"
+	        android:text="Test ListView"/>
+	    
+	    <Button 
+	        android:id="@+id/test_quickcontactbadge"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="@dimen/margin_left"
+	        android:layout_marginRight="@dimen/margin_right"
+	        android:layout_marginTop="@dimen/margin_top"
+	        android:layout_marginBottom="@dimen/margin_bottom"
+	        android:text="Test QuickContactBadge"/>
+	    
+	    <Button 
+	        android:id="@+id/test_activity"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="@dimen/margin_left"
+	        android:layout_marginRight="@dimen/margin_right"
+	        android:layout_marginTop="@dimen/margin_top"
+	        android:layout_marginBottom="@dimen/margin_bottom"
+	        android:text="Test Activity"/>
+	    
+	    <Button 
+	        android:id="@+id/test_imageview"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="@dimen/margin_left"
+	        android:layout_marginRight="@dimen/margin_right"
+	        android:layout_marginTop="@dimen/margin_top"
+	        android:layout_marginBottom="@dimen/margin_bottom"
+	        android:text="Test ImageView"/>
+	    
+	    <Button 
+	        android:id="@+id/test_chronometer"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="@dimen/margin_left"
+	        android:layout_marginRight="@dimen/margin_right"
+	        android:layout_marginTop="@dimen/margin_top"
+	        android:layout_marginBottom="@dimen/margin_bottom"
+	        android:text="Test Chronometer"/>
+	    
+	    <Button 
+	        android:id="@+id/test_clock"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="@dimen/margin_left"
+	        android:layout_marginRight="@dimen/margin_right"
+	        android:layout_marginTop="@dimen/margin_top"
+	        android:layout_marginBottom="@dimen/margin_bottom"
+	        android:text="Test Clock"/>
+	    
+	    <Button 
+	        android:id="@+id/test_togglebutton"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="@dimen/margin_left"
+	        android:layout_marginRight="@dimen/margin_right"
+	        android:layout_marginTop="@dimen/margin_top"
+	        android:layout_marginBottom="@dimen/margin_bottom"
+	        android:text="@string/test_togglebutton"/>
+	    
+	    <Button 
+	        android:id="@+id/test_custom"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="@dimen/margin_left"
+	        android:layout_marginRight="@dimen/margin_right"
+	        android:layout_marginTop="@dimen/margin_top"
+	        android:layout_marginBottom="@dimen/margin_bottom"
+	        android:text="@string/test_custom"/>
+	    
+	    <Button 
+	        android:id="@+id/test_tablelayout"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="@dimen/margin_left"
+	        android:layout_marginRight="@dimen/margin_right"
+	        android:layout_marginTop="@dimen/margin_top"
+	        android:layout_marginBottom="@dimen/margin_bottom"
+	        android:text="@string/test_tablelayout"/>
+	    
+	    <Button 
+	        android:id="@+id/test_framelayout"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="@dimen/margin_left"
+	        android:layout_marginRight="@dimen/margin_right"
+	        android:layout_marginTop="@dimen/margin_top"
+	        android:layout_marginBottom="@dimen/margin_bottom"
+	        android:text="@string/test_framelayout"/>
+	    
+	    <Button 
+	        android:id="@+id/test_relativelayout"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="@dimen/margin_left"
+	        android:layout_marginRight="@dimen/margin_right"
+	        android:layout_marginTop="@dimen/margin_top"
+	        android:layout_marginBottom="@dimen/margin_bottom"
+	        android:text="@string/test_relativelayout"/>
+	    
+	    <Button 
+	        android:id="@+id/test_gridlayout"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="@dimen/margin_left"
+	        android:layout_marginRight="@dimen/margin_right"
+	        android:layout_marginTop="@dimen/margin_top"
+	        android:layout_marginBottom="@dimen/margin_bottom"
+	        android:text="@string/test_gridlayout"/>
+	    
+	    <Button 
+	        android:id="@+id/test_textview"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="@dimen/margin_left"
+	        android:layout_marginRight="@dimen/margin_right"
+	        android:layout_marginTop="@dimen/margin_top"
+	        android:layout_marginBottom="@dimen/margin_bottom"
+	        android:text="@string/test_textview"/>
+	
+	</LinearLayout>
+</ScrollView>

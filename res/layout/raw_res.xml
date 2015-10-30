@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <Button
+        android:id="@+id/raw"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Start Raw" />
+    
+    <Button
+        android:id="@+id/res"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Start Res" />
+    
+    <Button
+        android:id="@+id/raw_t"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Stop Raw" />
+    
+    <Button
+        android:id="@+id/res_t"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Stop Res" />
+
+</LinearLayout>
