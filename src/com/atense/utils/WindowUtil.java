@@ -25,6 +25,9 @@ public class WindowUtil {
 
 	/**
 	 * 获取当前Window的宽
+	 * <ul>
+	 * <li> {@link #getDisplayMetrics(Window window)} </li>
+	 * </ul>
 	 * 
 	 * @param window
 	 *            当前窗口
@@ -37,6 +40,9 @@ public class WindowUtil {
 
 	/**
 	 * 获取当前Window的高
+	 * <ul>
+	 * <li> {@link #getDisplayMetrics(Window window)} </li>
+	 * </ul>
 	 * 
 	 * @param window
 	 *            当前窗口
@@ -49,6 +55,9 @@ public class WindowUtil {
 
 	/**
 	 * 获取当前Window的像素密度
+	 * <ul>
+	 * <li> {@link #getDisplayMetrics(Window window)} </li>
+	 * </ul>
 	 * 
 	 * @param window
 	 *            当前窗口
@@ -61,6 +70,12 @@ public class WindowUtil {
 
 	/**
 	 * 获取当前Window的屏幕密度
+	 * <ul>
+	 * <li> {@link #getDisplayMetrics(Window window)} </li>
+	 * </ul>
+	 * <strong>>
+	 * 	density = densityDpi / 160
+	 * </strong>
 	 * 
 	 * @param window
 	 *            当前窗口

@@ -1,15 +1,12 @@
 package com.atense.activity;
 
-import java.io.UnsupportedEncodingException;
-
 import android.app.Activity;
 import android.os.Bundle;
+import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.View;
 
 import com.atense.R;
-import com.atense.utils.DigestUtil;
-import com.atense.utils.ToastUtil;
 import com.atense.utils.WindowUtil;
 
 public class UtilActivity extends Activity {
@@ -37,7 +34,14 @@ public class UtilActivity extends Activity {
 //		String lo = DigestUtil.AESDecrypt(hex, AES_PWD);
 //		String log = s + "\n\r" + hex + "\n\r" + lo;
 //		Log.e(this.getClass().getSimpleName(), log);
-				
+		
+		DisplayMetrics metrics = WindowUtil.getDisplayMetrics(getWindow());
+		
+		Log.e(this.getClass().getSimpleName(), "ScreenWidth=" + metrics.widthPixels);
+		Log.e(this.getClass().getSimpleName(), "ScreenHeight=" +  metrics.heightPixels);
+		Log.e(this.getClass().getSimpleName(), "ScreenDensity=" +  metrics.density);
+		Log.e(this.getClass().getSimpleName(), "ScreenDensityDpi=" + metrics.densityDpi);
+		
 //		new Thread(new Runnable(){
 //			@Override
 //			public void run() {
