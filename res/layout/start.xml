@@ -7,36 +7,16 @@
 	    android:layout_width="match_parent"
 	    android:layout_height="wrap_content"
 	    android:orientation="vertical">
-	    <com.atense.widget.FlowLayout 
+	    
+	    <Button 
+	        android:id="@+id/test_util"
 	        android:layout_width="match_parent"
-	        android:layout_height="wrap_content">
-	        
-	        <Button 
-		        android:layout_width="wrap_content"
-		        android:layout_height="wrap_content"
-		        android:layout_marginTop="@dimen/margin_top"
-		        android:layout_marginBottom="@dimen/margin_bottom"
-		        android:text="Test Broadcast"/>
-	        <Button 
-		        android:layout_width="wrap_content"
-		        android:layout_height="wrap_content"
-		        android:layout_marginTop="@dimen/margin_top"
-		        android:layout_marginBottom="@dimen/margin_bottom"
-		        android:text="Test Broadcast"/>
-	        <Button 
-		        android:layout_width="wrap_content"
-		        android:layout_height="wrap_content"
-		        android:layout_marginTop="@dimen/margin_top"
-		        android:layout_marginBottom="@dimen/margin_bottom"
-		        android:text="Test Broadcast"/>
-	        <Button 
-		        android:layout_width="wrap_content"
-		        android:layout_height="wrap_content"
-		        android:layout_marginTop="@dimen/margin_top"
-		        android:layout_marginBottom="@dimen/margin_bottom"
-		        android:text="Test Broadcast"/>
-	        
-	    </com.atense.widget.FlowLayout>
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="@dimen/margin_left"
+	        android:layout_marginRight="@dimen/margin_right"
+	        android:layout_marginTop="@dimen/margin_top"
+	        android:layout_marginBottom="@dimen/margin_bottom"
+	        android:text="Test Util"/>
 	    
 	    <Button 
 	        android:id="@+id/test_broadcast"
