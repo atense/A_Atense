@@ -1,6 +1,7 @@
 package com.atense.utils;
 
 import java.io.ByteArrayOutputStream;
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.HttpURLConnection;
@@ -9,10 +10,18 @@ import java.net.URL;
 import java.util.Map;
 
 import android.graphics.Bitmap;
+import android.graphics.Bitmap.Config;
 import android.graphics.BitmapFactory;
+import android.graphics.Canvas;
 import android.graphics.Matrix;
+import android.graphics.Paint;
+import android.graphics.PorterDuff.Mode;
+import android.graphics.PorterDuffXfermode;
+import android.graphics.Rect;
+import android.graphics.RectF;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
+import android.util.Base64;
 
 /**
  * ImageUtils
@@ -250,4 +259,127 @@ public class ImageUtil {
             throw new RuntimeException("IOException occurred. ", e);
         }
     }
+    
+    /**
+	 * 质量压缩
+	 * 
+	 * @param imgPath
+	 * @return
+	 */
+	public static String compressImage(String imgPath) {
+		Bitmap bitmap = getBitmap(imgPath);
+		if (bitmap == null) {
+			return "";
+		}
+		ByteArrayOutputStream baos = new ByteArrayOutputStream();
+		bitmap.compress(Bitmap.CompressFormat.JPEG, 60, baos);
+		int options = 50;
+		while (baos.toByteArray().length > 5 * 100 * 1024) { // 循环判断如果压缩后图片是否大于0.5M,大于继续压缩
+			baos.reset();// 重置baos即清空baos
+			bitmap.compress(Bitmap.CompressFormat.JPEG, options, baos);// 这里压缩options%，把压缩后的数据存放到baos中
+			options -= 10;// 每次都减少10
+		}
+		byte[] appicon = baos.toByteArray();// 转为byte数组
+		// 释放原始图片占用的内存，防止out of memory异常发生
+		if (bitmap != null && !bitmap.isRecycled()) {
+			// 回收并且置为null
+			bitmap.recycle();
+			bitmap = null;
+		}
+		return Base64.encodeToString(appicon, Base64.DEFAULT);
+	}
+
+	/**
+	 * 获取照片
+	 * 
+	 * @param imgPath
+	 * @return
+	 */
+	@SuppressWarnings("deprecation")
+	public static Bitmap getBitmap(String imgPath) {
+		// Get bitmap through image path
+		BitmapFactory.Options newOpts = new BitmapFactory.Options();
+		newOpts.inJustDecodeBounds = false;
+		newOpts.inPurgeable = true;
+		newOpts.inInputShareable = true;
+		// Do not compress
+		newOpts.inSampleSize = 1;
+		newOpts.inPreferredConfig = Config.RGB_565;
+		return BitmapFactory.decodeFile(imgPath, newOpts);
+	}
+	
+	/**
+	 * 获得圆角图片
+	 * @param bitmap
+	 * @param roundPx
+	 * @return
+	 */
+	public  static Bitmap getRoundedCornerBitmap(Bitmap bitmap, float roundPx) {
+		 int w = bitmap.getWidth();
+		 int h = bitmap.getHeight();
+		 Bitmap output = Bitmap.createBitmap(w, h, Config.ARGB_8888);
+		 Canvas canvas = new Canvas(output);
+		 final int color = 0xff424242;
+		 final Paint paint = new Paint();
+		 final Rect rect = new Rect(0, 0, w, h);
+		 final RectF rectF = new RectF(rect);
+		 paint.setAntiAlias(true);
+		 canvas.drawARGB(0, 0, 0, 0);
+		 paint.setColor(color);
+		 canvas.drawRoundRect(rectF, roundPx, roundPx, paint);
+		 paint.setXfermode(new PorterDuffXfermode(Mode.SRC_IN));
+		 canvas.drawBitmap(bitmap, rect, rect, paint);
+		 return output;
+	 }
+	
+	/**
+	 * 对分辨率的的图片进行缩放
+	 * @param bitmap
+	 * @param width
+	 * @param height
+	 * @return
+	 */
+	public static Bitmap zoomBitmap(Bitmap bitmap, float width, float height) {
+		Bitmap newbmp =null;
+		if (bitmap != null){
+			int w = bitmap.getWidth();
+			int h = bitmap.getHeight();
+			Matrix matrix = new Matrix();
+			float scaleWidth = ((float) width / w);
+			float scaleHeight = ((float) height / h);
+			matrix.postScale(scaleWidth, scaleHeight);
+			newbmp = Bitmap.createBitmap(bitmap, 0, 0, w, h, matrix, false);
+		}
+	
+		return newbmp;
+	}
+	
+	/**
+	 * 利用BASE64Encoder对图片进行base64转码将图片转为string
+	 * @param  
+	 * @return 
+	 */
+	public static String f_imageToString(String imgFile) {
+		 int DEFAULT = 0;
+		//  将图片文件转化为字节数组字符串，并对其进行Base64编码处理
+		InputStream in = null;
+		byte[] data = null;
+		//  读取图片字节数组
+		try {
+			in = new FileInputStream(imgFile);
+			data = new byte[in.available()];
+			in.read(data);
+			in.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}catch (OutOfMemoryError  e) {
+			e.printStackTrace();
+		} 
+		//  返回Base64编码过的字节数组字符串
+		String str="";
+		if (data != null){
+			str= new String(Base64.encode(data, DEFAULT));
+		}
+		return str;
+	}
 }
