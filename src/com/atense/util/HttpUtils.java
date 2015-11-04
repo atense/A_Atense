@@ -63,35 +63,42 @@ public class HttpUtils {
 	 *            网络路径
 	 * @param localUrl
 	 *            本地路径
+	 * @param rerresh
+	 *            0 不会覆盖本地图片 1-覆盖本地图片
 	 */
-	public static void getImageFile(String webUrl, String localPath,String refresh) {// rerresh  0 不会覆盖本地图片  1-覆盖本地图片
+	public static void getImageFile(String webUrl, String localPath,
+			String refresh) {
 		Log.e(TAG, "webUrl------" + webUrl);
 		Log.e(TAG, "localPath------" + localPath);
-		if (webUrl != null) {
-			if (!webUrl.equals("") && !webUrl.equals("null")) {
-				File file = new File(localPath);// 保存文件
-				File file1 = new File(localPath.substring(0,
-						localPath.lastIndexOf("/") + 1));
-					if (!file.exists() || file.length() == 0L || refresh.equals("1")) {
-						if (!file1.exists())
-							FileUtils.makeDirs(localPath.substring(0,
-									localPath.lastIndexOf("/") + 1));
-						try {
-							FileOutputStream fos = new FileOutputStream(file);
-							InputStream is = new URL(webUrl).openStream();
-							int data = is.read();
-							while (data != -1) {
-								fos.write(data);
-								data = is.read();
-							}
-							fos.close();
-							is.close();
-							Log.e("webUrl", webUrl+"########下载图片资源文件 end..............");
-						} catch (IOException e) {
-							Log.e(TAG, e.toString() + "下载及保存时出现异常！");
-							file.delete();
-						}
+		if (StringUtils.isBlank(webUrl)) {
+			return;
+		}
+
+		if (!webUrl.equals("") && !webUrl.equals("null")) {
+			File file = new File(localPath);// 保存文件
+			File file1 = new File(localPath.substring(0,
+					localPath.lastIndexOf("/") + 1));
+			if (!file.exists() || file.length() == 0L || refresh.equals("1")) {
+				if (!file1.exists()) {
+					FileUtils.makeDirs(localPath.substring(0,
+							localPath.lastIndexOf("/") + 1));
+				}
+				try {
+					FileOutputStream fos = new FileOutputStream(file);
+					InputStream is = new URL(webUrl).openStream();
+					int data = is.read();
+					while (data != -1) {
+						fos.write(data);
+						data = is.read();
 					}
+					fos.close();
+					is.close();
+					Log.e("webUrl", webUrl
+							+ "########下载图片资源文件 end..............");
+				} catch (IOException e) {
+					Log.e(TAG, e.toString() + "下载及保存时出现异常！");
+					file.delete();
+				}
 			}
 		}
 
@@ -187,22 +194,24 @@ public class HttpUtils {
 		httpclient.getConnectionManager().shutdown();
 		return result;
 	}
-	
-	/** 
+
+	/**
 	 * 网络是否可用
-	 * @param context 
-	 * @return 
-	 */  
-	public boolean isNetworkAvailable(Context context) {  
-	    ConnectivityManager mgr = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);  
-	    NetworkInfo[] info = mgr.getAllNetworkInfo();  
-	    if (info != null) {  
-	        for (int i = 0; i < info.length; i++) {  
-	            if (info[i].getState() == NetworkInfo.State.CONNECTED) {  
-	                return true;  
-	            }  
-	        }  
-	    }  
-	    return false;  
+	 * 
+	 * @param context
+	 * @return
+	 */
+	public boolean isNetworkAvailable(Context context) {
+		ConnectivityManager mgr = (ConnectivityManager) context
+				.getSystemService(Context.CONNECTIVITY_SERVICE);
+		NetworkInfo[] info = mgr.getAllNetworkInfo();
+		if (info != null) {
+			for (int i = 0; i < info.length; i++) {
+				if (info[i].getState() == NetworkInfo.State.CONNECTED) {
+					return true;
+				}
+			}
+		}
+		return false;
 	}
 }
