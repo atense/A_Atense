@@ -93,12 +93,16 @@ public class StartActivity extends Activity implements OnClickListener {
 		findViewById(R.id.test_telephonymanager).setOnClickListener(this);
 		findViewById(R.id.test_smsmanager).setOnClickListener(this);
 		findViewById(R.id.test_broadcast).setOnClickListener(this);
+		findViewById(R.id.test_util).setOnClickListener(this);
 	}
 
 	@Override
 	public void onClick(View v) {
 		Intent intent = new Intent();
 		switch (v.getId()) {
+		case R.id.test_util:
+			intent.setClass(this, UtilActivity.class);
+			break;
 		case R.id.test_broadcast:
 			intent.setClass(this, BroadcastActivity.class);
 			break;
