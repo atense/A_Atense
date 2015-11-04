@@ -10,6 +10,7 @@ import android.view.View;
 import com.atense.R;
 import com.atense.utils.DigestUtil;
 import com.atense.utils.ToastUtil;
+import com.atense.utils.WindowUtil;
 
 public class UtilActivity extends Activity {
 	
@@ -31,12 +32,12 @@ public class UtilActivity extends Activity {
 //			e.printStackTrace();
 //		}
 		
-		String AES_PWD = "OfCsePVPmbdslnu4";
-		String hex = DigestUtil.AESEncrypt(s, AES_PWD);
-		String lo = DigestUtil.AESDecrypt(hex, AES_PWD);
-		String log = s + "\n\r" + hex + "\n\r" + lo;
-		Log.e(this.getClass().getSimpleName(), log);
-		
+//		String AES_PWD = "OfCsePVPmbdslnu4";
+//		String hex = DigestUtil.AESEncrypt(s, AES_PWD);
+//		String lo = DigestUtil.AESDecrypt(hex, AES_PWD);
+//		String log = s + "\n\r" + hex + "\n\r" + lo;
+//		Log.e(this.getClass().getSimpleName(), log);
+				
 //		new Thread(new Runnable(){
 //			@Override
 //			public void run() {
