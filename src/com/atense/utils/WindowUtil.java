@@ -73,7 +73,7 @@ public class WindowUtil {
 	 * <ul>
 	 * <li> {@link #getDisplayMetrics(Window window)} </li>
 	 * </ul>
-	 * <strong>>
+	 * <strong>
 	 * 	density = densityDpi / 160
 	 * </strong>
 	 * 
