@@ -2,12 +2,15 @@ package com.atense.activity;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.text.TextUtils;
+import android.text.TextUtils.StringSplitter;
 import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.View;
 
 import com.atense.R;
-import com.atense.utils.WindowUtil;
+import com.atense.util.StringUtils;
+import com.atense.util.WindowUtils;
 
 public class UtilActivity extends Activity {
 	
@@ -35,12 +38,14 @@ public class UtilActivity extends Activity {
 //		String log = s + "\n\r" + hex + "\n\r" + lo;
 //		Log.e(this.getClass().getSimpleName(), log);
 		
-		DisplayMetrics metrics = WindowUtil.getDisplayMetrics(getWindow());
+		DisplayMetrics metrics = WindowUtils.getDisplayMetrics(getWindow());
 		
 		Log.e(this.getClass().getSimpleName(), "ScreenWidth=" + metrics.widthPixels);
 		Log.e(this.getClass().getSimpleName(), "ScreenHeight=" +  metrics.heightPixels);
 		Log.e(this.getClass().getSimpleName(), "ScreenDensity=" +  metrics.density);
 		Log.e(this.getClass().getSimpleName(), "ScreenDensityDpi=" + metrics.densityDpi);
+		
+		TextUtils.isEmpty("dd");
 		
 //		new Thread(new Runnable(){
 //			@Override
