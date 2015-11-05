@@ -3,13 +3,11 @@ package com.atense.activity;
 import android.app.Activity;
 import android.os.Bundle;
 import android.text.TextUtils;
-import android.text.TextUtils.StringSplitter;
 import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.View;
 
 import com.atense.R;
-import com.atense.util.StringUtils;
 import com.atense.util.WindowUtils;
 
 public class UtilActivity extends Activity {
@@ -21,7 +19,7 @@ public class UtilActivity extends Activity {
 	}
 
 	public void digest(View v) {
-		String s = "中国人但是";
+//		String s = "中国人但是";
 //		String hex;
 //		try {
 //			hex = DigestUtil.bytes2Hex(s.getBytes("utf-8"));
