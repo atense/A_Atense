@@ -63,4 +63,35 @@ public class DateTimeUtils {
     public static String getCurrentTimeInString(SimpleDateFormat dateFormat) {
         return getFormatDate(getCurrentTimeInLong(), dateFormat);
     }
+    
+    /**
+	 * 获取两个时间的日期差
+	 * @param startDate
+	 * @param endDate
+	 * @return
+	 */
+	public static int getDaysBetween(Date startDate, Date endDate){  
+		Calendar start=Calendar.getInstance();
+		start.setTime(startDate);
+		Calendar end=Calendar.getInstance();
+		end.setTime(endDate);	
+		int unit=1;
+        if(start.after(end)){  
+            Calendar swap = start;  
+            start = end;  
+            end = swap;  
+            unit =-1;
+        }  
+        int days = end.get(Calendar.DAY_OF_YEAR)- start.get(Calendar.DAY_OF_YEAR);  
+        int y2 = end.get(Calendar.YEAR);  
+        if (start.get(Calendar.YEAR) != y2) {  
+            start = (Calendar) start.clone();  
+            do {  
+                days += start.getActualMaximum(Calendar.DAY_OF_YEAR);  
+                start.add(Calendar.YEAR, 1);  
+            }while(start.get(Calendar.YEAR) != y2);  
+        }  
+        return days*unit;  
+    }
+    
 }
