@@ -138,7 +138,7 @@ public class DigestUtils {
 	}
 	
 	/**
-	 * Unicode编码
+	 * 
 	 */
 	public static String escape(String src) {
 		int i;
@@ -164,7 +164,7 @@ public class DigestUtils {
 	}
 
 	/**
-	 * Unicode解码
+	 * 
 	 */
 	public static String unescape(String src) {
 		StringBuffer tmp = new StringBuffer();
