@@ -20,6 +20,13 @@ import java.util.regex.Pattern;
  */
 public class StringUtils {
 
+	private static final Character kongge = 32;				//空格
+	private static final Character huiche = 13;				//回车
+	private static final Character huanhang = 10;			        //换行
+
+	/**
+	 * 字符串转义
+	 */
 	public static String formatXML2String(String strData) {
 		strData = strData.replaceAll("&lt;", "<");
 		strData = strData.replaceAll("&gt;", ">");
@@ -29,12 +36,126 @@ public class StringUtils {
 		return strData;
 	}
 
+	/**
+	 * 字符串转义
+	 */
 	public static String formatString2XML(String strData) {
 		strData = strData.replaceAll("&", "&amp;");
 		strData = strData.replaceAll("<", "&lt;");
 		strData = strData.replaceAll(">", "&gt;");
 		strData = strData.replaceAll("'", "&apos;");
 		strData = strData.replaceAll("\"", "&quot;");
+		return strData;
+	}
+	
+	/**
+	 * 字符串转html格式
+	 * @param str
+	 * @return
+	 */
+	public static String content2html(String content) {
+		return content.replace("&","&amp;")
+				.replace(kongge.toString(),"&nbsp;")
+				.replace("<","&lt;")
+				.replace(">","&gt;")
+				.replace("\"","&quot;")
+				.replace(huiche.toString() + huanhang.toString(),"<br/>")
+				.replace(huiche.toString(),"<br/>")
+				.replace(huanhang.toString(),"<br/>");
+	}
+	
+	/**
+	 * 为特殊字符加\
+	 * @param content
+	 * @return
+	 */
+	public static String content2jsstr(String content) {
+		return content.replace(huiche.toString(),"\\r")
+				.replace(huanhang.toString(),"\\n")
+				.replace("\"", "\\\"")
+				.replace("'", "\\'");
+	}
+	
+	/**
+	 * 字符串转html格式
+	 * @param str
+	 * @return
+	 */
+	public static String content2textarea(String content) {
+		return content.replace("&","&amp;")
+		.replace(kongge.toString(),"&nbsp;")
+		.replace("<","&lt;")
+		.replace(">","&gt;")
+		.replace("\"","&quot;");
+	}
+	
+	/**
+	 * 去掉\
+	 * @param str
+	 * @return
+	 */
+	public static String jsstr2content(String str) {
+		return str==null?"":str.replace("\\r", huiche.toString())
+				.replace("\\n", huanhang.toString())
+				.replace("\\\"", "\"")
+				.replace("\\'", "'");
+	}
+	
+	/**
+	 * 字符串转html格式
+	 * @param str
+	 * @return
+	 */
+	public static String jsstr2html(String str) {
+		return content2html(jsstr2content(str));
+	}
+	
+	/**
+	 * 去html标记
+	 * @param content
+	 * @return
+	 */
+	public static String percolationHtml(String content) {
+		StringBuffer sb = new StringBuffer();
+		Pattern p = Pattern.compile("</?[a-z][a-z0-9]*[^<>]*>",Pattern.CASE_INSENSITIVE);
+		Matcher m =p.matcher(content);
+		boolean result = m.find();
+		while (result) {
+		m.appendReplacement(sb, "");
+		result = m.find();
+		}
+		m.appendTail(sb);
+		return sb.toString();
+	}
+	
+	/**
+	 * 替换一个字符串中的某些指定字符
+	 * 
+	 * @param strData
+	 *            String 原始字符串
+	 * @param regex
+	 *            String 要替换的字符串
+	 * @param replacement
+	 *            String 替代字符串
+	 * @return String 替换后的字符串
+	 */
+	public static String replaceString(String strData, String regex,
+			String replacement) {
+		if (strData == null) {
+			return null;
+		}
+		int index;
+		index = strData.indexOf(regex);
+		String strNew = "";
+		if (index >= 0) {
+			while (index >= 0) {
+				strNew += strData.substring(0, index) + replacement;
+				strData = strData.substring(index + regex.length());
+				index = strData.indexOf(regex);
+			}
+			strNew += strData;
+			return strNew;
+		}
 		return strData;
 	}
 
